@@ -22,16 +22,18 @@ class BeanSelectionControl extends Component {
 
   AddBeans = (newItem) => {
     const newBeanList = this.state.mainBeanList.concat(newItem);
-    this.setState({ mainBeanList: newBeanList, selectedBean: newItem });
+    this.setState({ mainBeanList: newBeanList});
   }
 
   render() {
     return (
-      <div>
+      <>
         <AddBeansForm onFormSubmit={this.AddBeans} />
-        <BeanList beanList = {this.state.mainBeanList} />
-        {this.state.selectedBean !== null && <BeanDetails bean = {this.state.selectedBean} onBuy = {this.BuyBeans} />}
-      </div>
+        <div className='section'>
+          <BeanList beanList={this.state.mainBeanList} />
+          {this.state.selectedBean !== null && <BeanDetails bean={this.state.selectedBean} onBuy={this.BuyBeans} />}
+        </div>
+      </>
     );
   }
 }

@@ -3,10 +3,10 @@ import Bean from './Bean';
 
 const BeanList = (props) => {
   return (
-    <div className='w-4 text-cyan-50 '>
-      <hr />
+    < >
       {props.beanList.map((item) =>
         <Bean
+          itemClick = {props.itemClick}
           name={item.name}
           price={item.price}
           origin={item.origin}
@@ -15,7 +15,7 @@ const BeanList = (props) => {
           key={item.key}
         />
       )}
-    </div>
+    </>
 
   );
 }

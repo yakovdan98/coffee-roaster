@@ -6,10 +6,10 @@ const Bean = (props) => {
     <div className='item' onClick={() => props.itemClick(props.key) }>
       <h1>{props.name}</h1>
       <ul>
-        <li>{props.price}</li>
-        <li>{props.origin}</li>
-        <li>{props.roast}</li>
-        <li>{props.amount}</li>
+        <li>Price: ${props.price}</li>
+        <li>Origin: {props.origin}</li>
+        <li>Roast: {props.roast}</li>
+        <li>Amount Left: {props.amount}</li>
       </ul>
     </div>
    );
