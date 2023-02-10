@@ -4,11 +4,11 @@ const AddBeansForm = (props) => {
 
   function handleAddBeans(e){
     e.preventDefault();
-    props.onFormSubmit({
+  props.onFormSubmit({
       key: v4(),
       name: e.target.name.value,
       origin: e.target.origin.value,
-      price: e.target.price.value,
+      price: parseInt(e.target.price.value),
       roast: e.target.roast.value,
       amount: 130
     });
