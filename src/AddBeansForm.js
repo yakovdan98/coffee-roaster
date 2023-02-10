@@ -1,9 +1,16 @@
-const AddBeansForm = (props) => {
+import React from 'react';
+import { v4 } from 'uuid';
+const AddBeansForm = (props) => {  
 
   function handleAddBeans(e){
+    e.preventDefault();
     props.onFormSubmit({
-      
-      name: 
+      key: v4(),
+      name: e.target.name.value,
+      origin: e.target.origin.value,
+      price: e.target.price.value,
+      roast: e.target.roast.value,
+      amount: 130
     });
   }
 
