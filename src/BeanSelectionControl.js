@@ -12,6 +12,11 @@ class BeanSelectionControl extends Component {
     }
   }
 
+  BuyBeans = (id) => {
+    console.log(this.state.mainBeanList.filter(item => item.key === id)[0].amount);
+    this.state.mainBeanList.filter(item => item.key === id)[0].amount--;
+  }
+
   AddBeans = (newItem) => {
     const newBeanList = this.state.mainBeanList.concat(newItem);
     this.setState({ mainBeanList: newBeanList, selectedBean: newItem });
@@ -22,7 +27,7 @@ class BeanSelectionControl extends Component {
       <div>
         <AddBeansForm onFormSubmit={this.AddBeans} />
         <BeanList beanList = {this.state.mainBeanList} />
-        <BeanDetails bean = {this.state.selectedBean} />
+        {this.state.selectedBean !== null && <BeanDetails bean = {this.state.selectedBean} onBuy = {this.BuyBeans} />}
       </div>
     );
   }

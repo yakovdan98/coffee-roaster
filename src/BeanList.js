@@ -9,7 +9,7 @@ const BeanList = (props) => {
         <Bean
           name={item.name}
           price={item.price}
-          origin={item.roast}
+          origin={item.origin}
           roast={item.roast}
           amount={item.amount}
           key={item.key}
