@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Bean = (props) => {
   return ( 
-    <div className='item' onClick={() => props.itemClick(props.key) }>
+    <div className='item' onClick={() => props.itemClick(props.id) }>
       <h1>{props.name}</h1>
       <ul>
         <li>Price: ${props.price}</li>

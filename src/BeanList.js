@@ -12,6 +12,7 @@ const BeanList = (props) => {
           origin={item.origin}
           roast={item.roast}
           amount={item.amount}
+          id = {item.key}
           key={item.key}
         />
       )}

@@ -25,13 +25,23 @@ class BeanSelectionControl extends Component {
     this.setState({ mainBeanList: newBeanList});
   }
 
+  BeanSelection = (id) => {
+    const newSelectedBean = this.state.mainBeanList.filter(item => item.key === id)[0];
+    this.setState({
+      selectedBean : newSelectedBean
+    })
+  }
+
   render() {
     return (
       <>
         <AddBeansForm onFormSubmit={this.AddBeans} />
         <div className='section'>
-          <BeanList beanList={this.state.mainBeanList} />
+          <BeanList itemClick = {this.BeanSelection} beanList={this.state.mainBeanList} />
+        </div>
+        <div className='details'>
           {this.state.selectedBean !== null && <BeanDetails bean={this.state.selectedBean} onBuy={this.BuyBeans} />}
+
         </div>
       </>
     );

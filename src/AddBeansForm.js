@@ -18,25 +18,25 @@ const AddBeansForm = (props) => {
   return (
     <div>
       <form onSubmit={handleAddBeans}>
-        <label for="name" >Name</label>
+        <label htmlFor="name" >Name</label>
         <input
           id='name'
           type='text'
           name='name'
           placeholder='Name' /><br />
-          <label for="origin" >Origin</label>
+          <label htmlFor="origin" >Origin</label>
         <input
           id='origin'
           type='text'
           name='origin'
           placeholder='Origin' /><br />
-          <label for="price" >Price</label>
+          <label htmlFor="price" >Price</label>
         <input
           id='price'
           type='number'
           name='price'
           placeholder='Price' /><br />
-          <label for="roast" >Roast</label>
+          <label htmlFor="roast" >Roast</label>
         <input
           id='roast'
           type='text'
