@@ -15,7 +15,9 @@ class BeanSelectionControl extends Component {
   BuyBeans = (id) => {
     console.log(this.state.mainBeanList.filter(item => item.key === id)[0].amount);
     this.state.mainBeanList.filter(item => item.key === id)[0].amount--;
-    this.setState(this.state.mainBeanList);
+    this.setState({
+      mainBeanList: this.state.mainBeanList
+    });
   }
 
   AddBeans = (newItem) => {
