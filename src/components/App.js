@@ -1,11 +1,11 @@
 import './App.css';
 import BeanSelectionControl from './BeanSelectionControl';
-
+import Header from './Header';
 function App() {
 
   return (
     <div className="App">
-      <h1>Vlads Coffee Roasters</h1>
+      <Header />
       <BeanSelectionControl />
     </div>
   );
