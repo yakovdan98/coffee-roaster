@@ -12,13 +12,7 @@ A website that shops a coffee roasters stock and give you the ability to buy
 * tailwind
 * HTML 
 * CSS 
-* Bootstrap
 * Javascript
-* webpack
-* node.js
-* Jest
-* Babel
-* ESLint
 
 ## Diagram
 ![Diagram](./diagram.png)
@@ -35,14 +29,7 @@ $ npm install
 ```
 $ npm run start
 ```
-* To lint project, run:
-```
-$ npm run lint
-```
-To run tests with Jest, run:
-```
-$ npm run test
-```
+
 
 ## Known Bugs
 * _none_
