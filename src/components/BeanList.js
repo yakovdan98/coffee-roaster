@@ -14,6 +14,7 @@ const BeanList = (props) => {
           amount={item.amount}
           id = {item.key}
           key={item.key}
+          hasItemClick={true}
         />
       )}
     </>

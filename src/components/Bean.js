@@ -2,8 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Bean = (props) => {
-  return ( 
-    <div className='item' onClick={() => props.itemClick(props.id) }>
+  return (
+    <div className='item' onClick={() => {
+      if (props.hasItemClick === true) {
+        props.itemClick(props.id)
+      }
+
+    }
+    }>
       <h1>{props.name}</h1>
       <ul>
         <li>Price: ${props.price}</li>
@@ -12,13 +18,14 @@ const Bean = (props) => {
         <li>Amount Left: {props.amount}</li>
       </ul>
     </div>
-   );
+  );
 }
 Bean.propTypes = {
   name: PropTypes.string,
   price: PropTypes.number,
   origin: PropTypes.string,
   roast: PropTypes.string,
-  amount: PropTypes.number
-} 
+  amount: PropTypes.number,
+  onClick: PropTypes.func
+}
 export default Bean;

@@ -8,12 +8,12 @@ class BeanSelectionControl extends Component {
     super(props);
     this.state = {
       mainBeanList: [],
-      selectedBean: null
+      selectedBean: null,
+      showError: false
     }
   }
 
   BuyBeans = (id) => {
-    console.log(this.state.mainBeanList.filter(item => item.key === id)[0].amount);
     this.state.mainBeanList.filter(item => item.key === id)[0].amount--;
     this.setState({
       mainBeanList: this.state.mainBeanList
@@ -21,8 +21,33 @@ class BeanSelectionControl extends Component {
   }
 
   AddBeans = (newItem) => {
-    const newBeanList = this.state.mainBeanList.concat(newItem);
-    this.setState({ mainBeanList: newBeanList});
+    if(newItem.name === "" || newItem.origin === "" || newItem.price < 0 || isNaN(newItem.price) || newItem.roast === ""){
+      this.setState({
+        showError: true
+      });
+    } else {
+      const newBeanList = this.state.mainBeanList.concat(newItem);
+      this.setState({ 
+        mainBeanList: newBeanList,
+        showError: false
+      });
+    }
+  }
+
+  EditBeans = (editItem) => {
+    console.log(editItem)
+    const beanToEdit = this.state.mainBeanList.filter(item => item.key === editItem.key)[0];
+    console.log(beanToEdit);
+    beanToEdit.name = editItem.name;
+    beanToEdit.origin = editItem.origin;
+    beanToEdit.price = editItem.price;
+    beanToEdit.roast = editItem.roast;
+
+    // const editedBeans = this.state.mainBeanList.filter(item => item.key !== this.state.selectedBean.key).concat(editItem);
+    this.setState({
+      mainBeanList: this.state.mainBeanList,
+      selectedBean: null
+    });
   }
 
   BeanSelection = (id) => {
@@ -36,12 +61,14 @@ class BeanSelectionControl extends Component {
     return (
       <>
         <AddBeansForm onFormSubmit={this.AddBeans} />
+        {this.state.showError && 
+          <h1>Error, fill all the fields</h1>
+        }
         <div className='section'>
           <BeanList itemClick = {this.BeanSelection} beanList={this.state.mainBeanList} />
         </div>
         <div className='details'>
-          {this.state.selectedBean !== null && <BeanDetails bean={this.state.selectedBean} onBuy={this.BuyBeans} />}
-
+          {this.state.selectedBean !== null && <BeanDetails onEdit={this.EditBeans} bean={this.state.selectedBean} onBuy={this.BuyBeans} />}
         </div>
       </>
     );
