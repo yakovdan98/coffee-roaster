@@ -3,7 +3,7 @@
 @tailwind utilities; */
 
 body {
-  background-color: rgba(0, 0, 0, 0.462);
+  background-color:aliceblue ;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -18,12 +18,16 @@ code {
 }
 
 .item {
+  border-radius: 10px;
+  margin: 10px;
   text-align: left;
   position: relative;
   width: 30%;
-  background-color: rgb(144, 194, 233);
-  border-style: solid;
-  border-radius: 20px;
+  background-color: rgb(152, 200, 237);
+  box-shadow: none;
+}
+.item:hover {
+  box-shadow: 0px 0px 5px 5px black;
 }
 
 .item h1 {
