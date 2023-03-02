@@ -7,6 +7,7 @@ function App() {
     <div className="App">
       <Header />
       <BeanSelectionControl />
+      <a href='https://github.com/yakovdan98/coffee-roaster'>Project on Github</a>
     </div>
   );
 }
