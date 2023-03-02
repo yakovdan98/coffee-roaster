@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Coffe-Roaster/static/css/main.25c8b853.css",
-    "main.js": "/Coffe-Roaster/static/js/main.060eb2b8.js",
-    "static/js/787.2dd3ea47.chunk.js": "/Coffe-Roaster/static/js/787.2dd3ea47.chunk.js",
-    "index.html": "/Coffe-Roaster/index.html",
-    "main.25c8b853.css.map": "/Coffe-Roaster/static/css/main.25c8b853.css.map",
-    "main.060eb2b8.js.map": "/Coffe-Roaster/static/js/main.060eb2b8.js.map",
-    "787.2dd3ea47.chunk.js.map": "/Coffe-Roaster/static/js/787.2dd3ea47.chunk.js.map"
+    "main.css": "/coffee-roaster/static/css/main.25c8b853.css",
+    "main.js": "/coffee-roaster/static/js/main.249057eb.js",
+    "static/js/787.2dd3ea47.chunk.js": "/coffee-roaster/static/js/787.2dd3ea47.chunk.js",
+    "index.html": "/coffee-roaster/index.html",
+    "main.25c8b853.css.map": "/coffee-roaster/static/css/main.25c8b853.css.map",
+    "main.249057eb.js.map": "/coffee-roaster/static/js/main.249057eb.js.map",
+    "787.2dd3ea47.chunk.js.map": "/coffee-roaster/static/js/787.2dd3ea47.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.25c8b853.css",
-    "static/js/main.060eb2b8.js"
+    "static/js/main.249057eb.js"
   ]
 }
